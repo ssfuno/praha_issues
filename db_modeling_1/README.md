@@ -10,7 +10,7 @@
     docker compose -f mysql_docker_setup/compose.yaml up -d
     ```
 
-    2. データベースへの接続
+2. データベースへの接続
     ```sh
     docker exec -it <コンテナ名> mysql -u root -p
     ```
