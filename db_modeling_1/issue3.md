@@ -6,11 +6,11 @@
 
 # 内容と考えたこと
 ## テーブルのDDL
-```./initial_data/created_tables.sql```
+```./mysql_docker_setup/initial_data/created_tables.sql```
 - MySQLではbooleanがtinyint(1)として解釈されるので、0か1の値だけ許容されるようにCHECK制約を追加した
 
 ## サンプルデータを投入するDML
-```./initial_data/insert_sample_data.sql```
+```./mysql_docker_setup/initial_data/insert_sample_data.sql```
 
 ## ユースケースを想定したクエリ
 ```./queries/monthly_sushi_sales.sql```

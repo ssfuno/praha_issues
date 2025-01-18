@@ -8,4 +8,4 @@ services:
       - 3307:3306
     volumes:
       - ./my.conf:/etc/mysql/my.cnf
-      - ../initial_data:/docker-entrypoint-initdb.d
+      - ./initial_data:/docker-entrypoint-initdb.d
