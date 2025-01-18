@@ -1,13 +1,13 @@
 # 環境構築方法
 
 ## 前提条件
-- Dockerがインストールされていること
+- Dockerおよびmakeがインストールされていること
 
 ## 手順
 
 1. MySQLコンテナの起動
     ```sh
-    docker compose -f mysql_docker_setup/compose.yaml up -d
+    make setup
     ```
 
 2. データベースへの接続
@@ -23,3 +23,8 @@
     - ユーザー名: `root`
     - パスワード: `root`
     - データベース名: `sushidb`
+
+3. MySQLコンテナの削除
+    ```sh
+    make teardown
+    ```
