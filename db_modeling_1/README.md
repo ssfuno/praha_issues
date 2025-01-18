@@ -5,26 +5,16 @@
 
 ## 手順
 
-1. MySQLコンテナの起動
+1. MySQLコンテナの起動および接続
     ```sh
     make setup
     ```
 
-2. データベースへの接続
+2. MySQLコンテナの削除
     ```sh
-    docker exec -it <コンテナ名> mysql -u root -p
+    make stop
     ```
-
-    - パスワード： `root`
-    - データベース名： `sushidb`
-
-    ローカル環境のDBクライアントから接続する場合
-    - ポート: `3307`
-    - ユーザー名: `root`
-    - パスワード: `root`
-    - データベース名: `sushidb`
-
-3. MySQLコンテナの削除
+    イメージやボリュームも削除したい場合
     ```sh
-    make teardown
+    make destroy
     ```
