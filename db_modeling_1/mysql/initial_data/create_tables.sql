@@ -17,7 +17,7 @@ CREATE TABLE menu_categories (
 CREATE TABLE menus (
   menu_id INT AUTO_INCREMENT,
   menu_name VARCHAR(50) NOT NULL,
-  price_without_tax INT NOT NULL CHECK (price_without_tax >= 0),
+  price_without_tax INT UNSIGNED NOT NULL,
   is_set_menu BOOLEAN NOT NULL CHECK (is_set_menu IN (0, 1)),
   is_takeout_menu BOOLEAN NOT NULL CHECK (is_takeout_menu IN (0, 1)),
   menu_category_id INT,
