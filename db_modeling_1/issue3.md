@@ -16,9 +16,6 @@
 ```./queries/monthly_sushi_sales.sql```
 - 処理を軽くするため、先に今月の注文で絞り込むようにした
 
-## （参考）ER図
-[注文票 ER図](https://miro.com/app/board/uXjVLyG5gQE=/?share_link_id=416247123414)下部のフレーム
-
 ## （参考）データの確認方法
 ```./README.md```
 
