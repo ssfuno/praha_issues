@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mysql:8.4.3
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sushidb
+    ports:
+      - 3307:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./mysql/my.conf:/etc/mysql/my.cnf
+      - ./mysql/initial_data:/docker-entrypoint-initdb.d
+volumes:
+  mysql-data:
