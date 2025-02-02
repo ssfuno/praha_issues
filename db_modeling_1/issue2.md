@@ -22,9 +22,9 @@ erDiagram
     menus |o--||  menu_categories : ""
     menus ||--o| menu_sale_conditions : ""
 
-    menus ||--o{ menus_history : "履歴"
-    menu_categories ||--o{ menu_categories_history : "履歴"
-    menu_sale_conditions ||--o{ menu_sale_conditions_history : "履歴"
+    menus ||--|{ menus_history : "履歴"
+    menu_categories ||--|{ menu_categories_history : "履歴"
+    menu_sale_conditions ||--|{ menu_sale_conditions_history : "履歴"
 
     orders {
         int id PK "注文ID"
