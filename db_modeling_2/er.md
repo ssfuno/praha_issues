@@ -90,6 +90,7 @@ erDiagram
         int id PK "メッセージID"
         int user_id FK "ユーザID"
         int thread_id FK "スレッドID"
+        string content "メッセージ内容"
         datetime created_at "作成日時"
         datetime updated_at "更新日時"
     }
