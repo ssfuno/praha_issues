@@ -36,9 +36,8 @@ erDiagram
     users ||--o{ messages : ""
     workspaces ||--o{ channels : ""
     workspace_members }o--|| workspaces : ""
-    channels ||--o{ threads : ""
     channel_members }o--|| channels : ""
-    threads ||--|{ messages : ""
+    channels ||--o{ messages : ""
 
     users {
         int id PK "ユーザID"
@@ -79,17 +78,11 @@ erDiagram
         datetime updated_at "更新日時"
     }
 
-    threads {
-        int id PK "スレッドID"
-        int channel_id FK "チャネルID"
-        datetime created_at "作成日時"
-        datetime updated_at "更新日時"
-    }
-
     messages {
         int id PK "メッセージID"
         int user_id FK "ユーザID"
-        int thread_id FK "スレッドID"
+        int channel_id FK "チャネルID"
+        int parent_id FK "親メッセージID"
         string content "メッセージ内容"
         datetime created_at "作成日時"
         datetime updated_at "更新日時"
