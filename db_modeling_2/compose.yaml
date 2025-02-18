@@ -1,0 +1,17 @@
+services:
+  db:
+    build:
+      context: .
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: chatdb
+    ports:
+      - 3307:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./conf/my.conf:/etc/mysql/conf.d/my.cnf
+      - ./conf/mecabrc:/etc/mecabrc
+      - ./init_sql:/docker-entrypoint-initdb.d
+volumes:
+  mysql-data:
