@@ -8,7 +8,6 @@ services:
       - "7474:7474"
       - "7687:7687"
     volumes:
-      - neo4j-data:/data
+      - ./data:/data
+      - ./logs:/logs
       - ./init_query.cypher:/init_query.cypher
-volumes:
-  neo4j-data:
