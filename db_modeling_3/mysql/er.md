@@ -1,6 +1,7 @@
 ```mermaid
 erDiagram
     users ||--o{ document_histories : ""
+    users ||--o{ directories : ""
     directories ||--o{ directories : ""
     directories ||--o{ documents : ""
     documents ||--|{ document_histories : ""

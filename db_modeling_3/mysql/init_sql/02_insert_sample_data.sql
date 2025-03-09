@@ -7,13 +7,13 @@ VALUES
 
 -- directoriesテーブルにデータを挿入
 INSERT INTO
-  directories (directory_name, parent_id)
+  directories (directory_name, parent_id, user_id)
 VALUES
-  ('Root', NULL),
-  ('Projects', 1),
-  ('Reports', 1),
-  ('Reports 2024', 3),
-  ('Reports 2025', 3);
+  ('Root', NULL, 1),
+  ('Projects', 1, 1),
+  ('Reports', 1, 1),
+  ('Reports 2024', 3, 1),
+  ('Reports 2025', 3, 2);
 
 -- documentsテーブルにデータを挿入
 INSERT INTO
