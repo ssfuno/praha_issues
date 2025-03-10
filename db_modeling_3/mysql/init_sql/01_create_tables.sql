@@ -19,8 +19,7 @@ CREATE TABLE directories (
 CREATE TABLE documents (
   id INT PRIMARY KEY AUTO_INCREMENT,
   directory_id INT NOT NULL,
-  deleted_at DATETIME DEFAULT '9999-12-31 23:59:59',
-  FOREIGN KEY (directory_id) REFERENCES directories (id)
+  deleted_at DATETIME DEFAULT '9999-12-31 23:59:59'
 );
 
 CREATE TABLE document_histories (
