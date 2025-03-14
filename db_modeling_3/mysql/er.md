@@ -1,6 +1,7 @@
 ```mermaid
 erDiagram
     users ||--o{ document_histories : ""
+    users ||--o{ directories : ""
     directories ||--o{ directories : ""
     directories ||--o{ documents : ""
     documents ||--|{ document_histories : ""
@@ -15,7 +16,7 @@ erDiagram
 
     directories {
         int id PK "ディレクトリID"
-        string directory_name "ユーザ名"
+        string directory_name "ディレクトリ名"
         int parent_id FK "親ディレクトリID"
         datetime created_at "作成日時"
         datetime updated_at "更新日時"
