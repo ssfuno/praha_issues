@@ -80,3 +80,20 @@ FROM
   ancestor_directories
 ORDER BY
   id;
+
+-- ドキュメントの並び替え
+START TRANSACTION;
+
+UPDATE documents
+SET
+  position = 2
+WHERE
+  id = 1;
+
+UPDATE documents
+SET
+  position = 1
+WHERE
+  id = 3;
+
+COMMIT;

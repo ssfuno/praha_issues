@@ -17,10 +17,11 @@ VALUES
 
 -- documentsテーブルにデータを挿入
 INSERT INTO
-  documents (directory_id)
+  documents (directory_id, position)
 VALUES
-  (2),
-  (4);
+  (2, 1),
+  (4, 1),
+  (2, 2);
 
 -- document_historiesテーブルにデータを挿入
 INSERT INTO
@@ -43,4 +44,10 @@ VALUES
     1,
     'Revised Annual Report 2024',
     'This is the final annual report 2024.'
+  ),
+  (
+    3,
+    2,
+    'Hyper Project Plan',
+    'This is the hyper project plan.'
   );
