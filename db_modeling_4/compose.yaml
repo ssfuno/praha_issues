@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mysql:8.4.3
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: penpendb
+    ports:
+      - 3307:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./my.conf:/etc/mysql/my.cnf
+      - ./init_sql:/docker-entrypoint-initdb.d
+volumes:
+  mysql-data:
