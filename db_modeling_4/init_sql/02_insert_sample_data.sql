@@ -1,6 +1,6 @@
 -- usersテーブルにデータを挿入
 INSERT INTO
-  users (id, user_name)
+  users (id, name)
 VALUES
   ('A12345', 'Alice'),
   ('B12345', 'Bob'),
@@ -8,7 +8,7 @@ VALUES
 
 -- workspacesテーブルにデータを挿入
 INSERT INTO
-  workspaces (id, workspace_name, access_token)
+  workspaces (id, name, access_token)
 VALUES
   (1, 'Workspace Alpha', 'token_alpha'),
   (2, 'Workspace Beta', 'token_beta');

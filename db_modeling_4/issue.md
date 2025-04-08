@@ -37,12 +37,12 @@ erDiagram
 
     users {
         string id PK "ユーザID"
-        string user_name "ユーザ名"
+        string name "ユーザ名"
     }
 
     workspaces {
         int id PK "ワークスペースID"
-        string workspace_name "ワークスペース名"
+        string name "ワークスペース名"
         string access_token "アクセストークン"
         datetime created_at "作成日時"
     }
