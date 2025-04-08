@@ -28,6 +28,7 @@ CREATE TABLE reminders (
   assignee VARCHAR(100) NOT NULL,
   is_completd BOOLEAN NOT NULL CHECK (is_completd IN (0, 1)),
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (task_id) REFERENCES tasks (id),
   FOREIGN KEY (assignee) REFERENCES users (id)
 );

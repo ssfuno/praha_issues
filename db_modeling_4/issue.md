@@ -62,6 +62,7 @@ erDiagram
         string assignee FK "アサインされたユーザID"
         boolean is_completd "完了フラグ"
         datetime created_at "作成日時"
+        datetime updated_at "更新日時"
     }
 
     reminder_schedules {
