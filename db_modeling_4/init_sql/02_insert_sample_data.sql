@@ -42,7 +42,13 @@ VALUES
 
 -- reminder_schedulesテーブルにデータを挿入
 INSERT INTO
-  reminder_schedules (id, task_id, interval_days, cron_expression)
+  reminder_schedules (
+    id,
+    task_id,
+    interval_days,
+    cron_expression,
+    next_scheduled_date
+  )
 VALUES
-  (1, 1, NULL, '0 7 * * SUN'),
-  (2, 2, 2, NULL);
+  (1, 1, NULL, '0 7 * * SUN', '2025-04-13 07:00:00'),
+  (2, 2, 2, NULL, '2025-04-10 07:00:00');

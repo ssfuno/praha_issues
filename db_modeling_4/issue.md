@@ -70,7 +70,9 @@ erDiagram
         int task_id FK "タスクID"
         int interval_days "何日ごとのリマインド周期"
         string cron_expression "cron式によるリマインド周期"
+        datetime next_scheduled_date "次回リマインド実行日時"
         datetime created_at "作成日時"
+        datetime updated_at "更新日時"
     }
 ```
 

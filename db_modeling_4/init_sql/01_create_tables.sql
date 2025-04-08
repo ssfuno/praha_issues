@@ -38,6 +38,8 @@ CREATE TABLE reminder_schedules (
   task_id INT NOT NULL,
   interval_days INT,
   cron_expression TEXT,
+  next_scheduled_date DATETIME NOT NULL,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (task_id) REFERENCES tasks (id)
 );
