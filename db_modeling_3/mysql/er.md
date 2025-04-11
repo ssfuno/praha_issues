@@ -25,6 +25,7 @@ erDiagram
     documents {
         int id PK "ドキュメントID"
         int directory_id FK "ディレクトリID"
+        int position "並び順"
         datetime deleted_at "削除日時"
     }
 

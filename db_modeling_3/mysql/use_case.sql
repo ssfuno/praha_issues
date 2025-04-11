@@ -31,7 +31,7 @@ FROM
 WHERE
   document_id = 2
 ORDER BY
-  created_at
+  created_at DESC
 LIMIT
   1;
 
@@ -80,3 +80,20 @@ FROM
   ancestor_directories
 ORDER BY
   id;
+
+-- ドキュメントの並び替え
+START TRANSACTION;
+
+UPDATE documents
+SET
+  position = 2
+WHERE
+  id = 1;
+
+UPDATE documents
+SET
+  position = 1
+WHERE
+  id = 3;
+
+COMMIT;
