@@ -31,7 +31,7 @@ FROM
 WHERE
   document_id = 2
 ORDER BY
-  created_at
+  created_at DESC
 LIMIT
   1;
 
